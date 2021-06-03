@@ -1,4 +1,4 @@
-package main
+package snowflake
 
 import (
 	"math"
@@ -12,8 +12,8 @@ type SnwoFlake struct {
 	MachineId    int64
 	MachineBits  int64
 	// 起始时间，时间戳都是对这个时间的差
-	StartEpoch   int64
-	Mutex        sync.Mutex
+	StartEpoch int64
+	Mutex      sync.Mutex
 }
 
 var lastStamp int64 = -1
